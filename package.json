@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "update-jackpots": "node scripts/update-jackpots.js",
+    "dev": "npm run update-jackpots && vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "canvas-confetti": "^1.9.4",
+    "cheerio": "^1.2.0",
+    "framer-motion": "^12.38.0",
+    "html-to-image": "^1.11.13",
+    "html2canvas": "^1.4.1",
+    "lucide-react": "^0.577.0",
+    "puppeteer": "^24.39.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@vitejs/plugin-react": "^5.1.4",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "vite": "^7.3.1"
+  }
+}

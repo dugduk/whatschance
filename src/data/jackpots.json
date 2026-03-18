@@ -1,0 +1,14 @@
+{
+  "megaMillions": {
+    "amount": 536,
+    "cashOption": 241.2,
+    "nextDrawing": "Tue, Mar 10, 2026",
+    "ticketPrice": 5
+  },
+  "powerball": {
+    "amount": 101,
+    "cashOption": 46,
+    "nextDrawing": "Wed, Mar 18, 2026",
+    "ticketPrice": 2
+  }
+}

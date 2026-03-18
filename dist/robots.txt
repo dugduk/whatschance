@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://whatschance.com/sitemap.xml

@@ -620,7 +620,60 @@ const T = {
   strongHitRandomDraw: { en: 'That was a strong hit for a random historical draw.', ko: '무작위 과거 회차 치고는 꽤 좋은 성적이네요.', es: 'Ese fue un buen acierto para un sorteo histórico.' },
   jackpotOddsLabel: { en: 'Jackpot odds', ko: '잭팟 확률', es: 'Probabilidades de jackpot' },
   lightningOddsLabel: { en: 'Being struck by lightning', ko: '벼락 맞을 확률', es: 'Ser alcanzado por un rayo' },
-  sharkAttackOddsLabel: { en: 'Shark attack', ko: '상어에게 물릴 확률', es: 'Ataque de tiburón' }
+  sharkAttackOddsLabel: { en: 'Shark attack', ko: '상어에게 물릴 확률', es: 'Ataque de tiburón' },
+
+  // ─── History & Fun Facts ───
+  historyBtnTitle: { en: 'Discover Lottery History & Fun Facts 📚', ko: '복권의 역사와 흥미로운 진실 📚', es: 'Descubre la Historia y Curiosidades 📚' },
+  historyTitle: { en: 'Lottery History & Fun Facts', ko: '복권의 역사와 흥미로운 진실', es: 'Historia de la Lotería y Curiosidades' },
+  historyIntro: { 
+    en: "Think the modern lottery is just a math game? The truth involves ancient empires, funding the Ivy League, and unimaginable probability quirks. Prepare to have your mind blown.", 
+    ko: "현대의 복권이 그저 운과 수학 게임일 뿐이라고 생각하시나요? 진실은 고대 제국, 아이비리그 명문대의 설립 자금, 그리고 상상을 초월하는 확률의 장난과 얽혀 있습니다. 놀랄 준비 되셨나요?", 
+    es: "¿Crees que la lotería moderna es solo un juego de matemáticas? La verdad involucra imperios antiguos, financiamiento de universidades y peculiaridades de probabilidad inimaginables." 
+  },
+  
+  hist1Title: { 
+    en: "1. The Ancient Origins: Funding the Great Wall of China", 
+    ko: "1. 고대 기원: 만리장성 건설 자금을 조달하다", 
+    es: "1. Orígenes Antiguos: Financiando la Gran Muralla China" 
+  },
+  hist1Desc: { 
+    en: "The earliest recorded signs of a lottery trace back to the Chinese Han Dynasty between 205 and 187 BC. These early 'Keno' slips are believed to have helped finance major government projects, including the construction of the Great Wall of China. You aren't just buying a ticket; you're participating in a 2,000-year-old tradition of voluntary taxation!", 
+    ko: "최초의 복권 형태는 기원전 205년~187년 중국 한나라 시대까지 거슬러 올라갑니다. 당시 초기 형태의 '키노(Keno)' 복권은 만리장성 건설을 포함한 대규모 국가 프로젝트 자금을 조달하는 데 사용되었습니다. 즉, 당신은 단순히 티켓을 사는 게 아니라 2,000년이나 된 '자발적 납세' 전통에 참여하고 있는 셈입니다!", 
+    es: "Los primeros signos de lotería se remontan a la dinastía Han en China. Se cree que estos boletos ayudaron a financiar importantes proyectos, incluida la Gran Muralla China." 
+  },
+
+  hist2Title: { 
+    en: "2. Building the Ivy League with Lottery Money", 
+    ko: "2. 아이비리그 명문대들을 세운 도박 자금", 
+    es: "2. Construyendo la Ivy League con Dinero de Lotería" 
+  },
+  hist2Desc: { 
+    en: "In colonial America, lotteries were incredibly popular and respectable. Benjamin Franklin used lotteries to pay for cannons to defend Philadelphia. Even more shocking? Elite universities like Harvard, Yale, Princeton, and Columbia were substantially funded through lottery campaigns in the 1700s. Without gamblers hoping for a breakout payout, America's finest educational institutions might look very different today.", 
+    ko: "미국 식민지 시대에 복권은 대단히 인기 있고 당당한 사업이었습니다. 벤자민 프랭클린은 필라델피아 방어를 위한 대포를 사기 위해 주 정부 복권을 발행했죠. 더 충격적인 사실은 하버드, 예일, 프린스턴, 콜롬비아 같은 자존심 높은 최고급 명문 대학들이 1700년대 복권 수익금으로 세워졌다는 것입니다. 인생 역전을 꿈꾸던 사람들이 없었다면 오늘날 미국의 명문대들은 존재하지 않았을 수도 있습니다.", 
+    es: "En la América colonial, universidades de élite como Harvard, Yale y Princeton fueron financiadas en gran parte mediante campañas de lotería en los años 1700." 
+  },
+
+  hist3Title: { 
+    en: "3. The Evolution of Mega Millions & Powerball", 
+    ko: "3. 1조원 잭팟의 탄생 비화와 꼼수", 
+    es: "3. La Evolución de Mega Millions y Powerball" 
+  },
+  hist3Desc: { 
+    en: "Powerball started in 1992, replacing Lotto America. Mega Millions followed in 1996 as 'The Big Game'. Why are jackpots so staggeringly massive today? In 2015 and 2017, both games intentionally increased the pool of numbers. They made winning the jackpot mathematically harder (from 1 in 175M to 1 in 292M+). Harder odds mean constant rollovers, which manufacture the $1B+ headlines that drive historic ticket sales.", 
+    ko: "파워볼은 1992년에 '로또 아메리카'를 대체하며 시작되었고, 메가 밀리언스는 1996년 '더 빅 게임'으로 시작했죠. 그런데 왜 요즘 잭팟 금액이 1조 원, 2조 원씩 천문학적으로 커졌을까요? 2015년과 2017년, 두 복권 위원회는 고의로 당첨 숫자 범위를 대폭 늘려 1등 당첨 확률을(1억 7500만 분의 1에서 2억 9200만 분의 1 이상으로) 악랄하게 낮췄습니다. 아무도 당첨되지 않아 금액이 계속 이월되어야 전 세계 언론을 장식하는 '빌리언 달러 잭팟'이 쓰여지고, 역대급 판매량을 올릴 수 있기 때문입니다.", 
+    es: "Powerball comenzó en 1992 y Mega Millions en 1996. Recientemente, ambos hicieron intencionalmente más difícil ganar el premio mayor para crear premios acumulados de más de $1B." 
+  },
+
+  hist4Title: { 
+    en: "4. The Bizarre Math of Winning Multiple Times", 
+    ko: "4. 여러 번 당첨되는 사람들의 기괴한 수학", 
+    es: "4. La Extraña Matemática de Ganar Varias Veces" 
+  },
+  hist4Desc: { 
+    en: "You might hear of someone winning the lottery twice in one lifetime and think, 'That’s completely rigged or a simulation glitch!' Actually, statistician Stephen Samuels mathematically calculated that given the millions of people who regularly purchase tickets worldwide every single week, it is actually highly probable—even expected—that a handful of individuals will win multiple massive jackpots. It's known as the 'Law of Truly Large Numbers'. It just means some people truly scoop out all the luck in the universe.", 
+    ko: "어떤 사람이 복권 1등에 두 번이나 당첨됐다는 뉴스를 보면 '이거 무조건 조작이네!'라고 생각하시겠죠. 하지만 통계학자 스티븐 사무엘스에 따르면 전 세계적으로 매주 수천만 명이 정기적으로 복권을 산다는 점을 감안할 때, 누군가 평생 두 번 이상의 잭팟을 터뜨리는 것은 수학적으로 '매우 정상적이고 100% 일어날 수밖에 없는' 현상이라고 합니다. 이를 통계학에서는 '진정으로 큰 수의 법칙'이라고 부릅니다. 누군가는 정말로 우주의 행운을 싹싹 긁어간다는 뜻이죠.", 
+    es: "Dada la cantidad de personas que compran boletos, es matemáticamente probable que algunas ganen varias veces. Es la 'Ley de los Números Verdaderamente Grandes'." 
+  }
 }
 
 

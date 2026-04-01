@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo, createContext, useCon
 import OddsBreakdown from './OddsBreakdown.jsx'
 import ZodiacFortune from './ZodiacFortune.jsx'
 import LotterySimulator from './lottery_simulator.jsx'
+import LotteryHistory from './LotteryHistory.jsx'
 import { t, tRaw } from './translations.js'
 import html2canvas from 'html2canvas'
 import { STATE_TAX_RATES } from './data/stateTaxRates'
@@ -1019,7 +1020,7 @@ function LegalModal({ type, onClose }) {
 // SCREEN 1: START PAGE
 // ============================================================
 
-function StartPage({ onStart, onExploreOdds, jackpotData, lastWinners, lastJackpotWinners, isLiveData }) {
+function StartPage({ onStart, onExploreOdds, onGoToHistory, jackpotData, lastWinners, lastJackpotWinners, isLiveData }) {
   const s = useThemeStyles()
   const { theme } = useTheme()
   const { lang } = useLang()
@@ -1161,6 +1162,20 @@ function StartPage({ onStart, onExploreOdds, jackpotData, lastWinners, lastJackp
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="w-full flex items-center justify-center mt-4 mb-6">
+        <button
+           onClick={onGoToHistory}
+           className="px-6 py-3 rounded-xl font-bold transition-transform hover:scale-105"
+           style={{ 
+             background: s.isDark ? 'rgba(255,215,0,0.1)' : 'rgba(212,175,55,0.1)', 
+             color: s.isDark ? '#ffd700' : '#b8860b', 
+             border: `1px solid ${s.isDark ? 'rgba(255,215,0,0.3)' : 'rgba(212,175,55,0.3)'}` 
+           }}
+        >
+          {t('historyBtnTitle', lang)}
+        </button>
       </section>
 
       {/* Ad Slot */}
@@ -2904,7 +2919,10 @@ export default function App() {
           {/* Main content area with min-height to prevent footer jump */}
           <div className="flex-1 flex flex-col">
             {screen === 'start' && (
-              <StartPage onStart={handleStart} onExploreOdds={handleExploreOdds} jackpotData={liveJackpots} lastWinners={lastWinners} lastJackpotWinners={lastJackpotWinners} isLiveData={isLiveData} />
+              <StartPage onStart={handleStart} onExploreOdds={handleExploreOdds} onGoToHistory={() => { window.scrollTo(0,0); navigateTo('history'); }} jackpotData={liveJackpots} lastWinners={lastWinners} lastJackpotWinners={lastJackpotWinners} isLiveData={isLiveData} />
+            )}
+            {screen === 'history' && (
+              <LotteryHistory onGoBack={() => { window.scrollTo(0,0); navigateTo('start'); }} />
             )}
             {screen === 'selection' && (
               <TicketSelection

@@ -1058,7 +1058,7 @@ function LegalModal({ type, onClose }) {
 // SCREEN 1: START PAGE
 // ============================================================
 
-function StartPage({ onStart, onExploreOdds, onGoToHistory, jackpotData, lastWinners, lastJackpotWinners, isLiveData }) {
+function StartPage({ onStart, onExploreOdds, onGoToHistory, onGoToChecklist, onGoToLucky, onGoToLumpSum, jackpotData, lastWinners, lastJackpotWinners, isLiveData }) {
   const s = useThemeStyles()
   const { theme } = useTheme()
   const { lang } = useLang()
@@ -1202,18 +1202,58 @@ function StartPage({ onStart, onExploreOdds, onGoToHistory, jackpotData, lastWin
         </div>
       </section>
 
-      <section className="w-full flex items-center justify-center mt-4 mb-6">
-        <button
-           onClick={onGoToHistory}
-           className="px-6 py-3 rounded-xl font-bold transition-transform hover:scale-105"
-           style={{ 
-             background: s.isDark ? 'rgba(255,215,0,0.1)' : 'rgba(212,175,55,0.1)', 
-             color: s.isDark ? '#ffd700' : '#b8860b', 
-             border: `1px solid ${s.isDark ? 'rgba(255,215,0,0.3)' : 'rgba(212,175,55,0.3)'}` 
-           }}
-        >
-          {t('historyBtnTitle', lang)}
-        </button>
+      <section className="w-full max-w-2xl mx-auto flex flex-col mt-8 mb-6 px-4">
+        <h3 className="text-xl md:text-2xl font-black mb-4 text-center tracking-tight" style={{ color: s.text }}>
+          {lang === 'ko' ? "최신 이야기 & 꿀팁 🔥" : "Latest Stories & Tips 🔥"}
+        </h3>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          {/* Card 1: History */}
+          <button onClick={onGoToHistory} className="group flex flex-col items-start p-5 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-sm hover:shadow-md outline-none focus:ring-2" style={{ background: s.cardBg, border: `1px solid ${s.cardBorder}`, focusRingColor: '#b8860b' }}>
+            <span className="text-2xl mb-2" aria-hidden="true">📚</span>
+            <h4 className="font-bold text-sm md:text-base leading-tight mb-1" style={{ color: s.text }}>
+              {t('historyBtnTitle', lang).replace(' 📚', '')}
+            </h4>
+            <p className="text-[11px] md:text-xs line-clamp-2" style={{ color: s.textDim }}>
+              {lang === 'ko' ? "과거 엄청난 당첨자들의 이야기와 충격적인 사실들을 확인해 보세요." : "Discover crazy stories from past winners and shocking lottery facts."}
+            </p>
+          </button>
+
+          {/* Card 2: Checklist */}
+          <button onClick={onGoToChecklist} className="group flex flex-col items-start p-5 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-sm hover:shadow-md outline-none focus:ring-2" style={{ background: s.cardBg, border: `1px solid ${s.cardBorder}` }}>
+            <span className="text-2xl mb-2" aria-hidden="true">✅</span>
+            <h4 className="font-bold text-sm md:text-base leading-tight mb-1" style={{ color: s.text }}>
+              {lang === 'ko' ? "당첨 시 반드시 해야 할 행동 강령" : "Jackpot Winning Checklist"}
+            </h4>
+            <p className="text-[11px] md:text-xs line-clamp-2" style={{ color: s.textDim }}>
+              {lang === 'ko' ? "당첨 번호를 확인한 순간, 가장 먼저 챙겨야 할 생존 가이드." : "First steps you must take the moment you realize you won the jackpot."}
+            </p>
+          </button>
+
+          {/* Card 3: Lump Sum vs Annuity */}
+          <button onClick={onGoToLumpSum} className="group flex flex-col items-start p-5 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-sm hover:shadow-md outline-none focus:ring-2" style={{ background: s.cardBg, border: `1px solid ${s.cardBorder}` }}>
+            <span className="text-2xl mb-2" aria-hidden="true">🏦</span>
+            <h4 className="font-bold text-sm md:text-base leading-tight mb-1" style={{ color: s.text }}>
+              {lang === 'ko' ? "일시불 vs 연금 수령의 진실" : "Lump Sum vs Annuity Truth"}
+            </h4>
+            <p className="text-[11px] md:text-xs line-clamp-2" style={{ color: s.textDim }}>
+              {lang === 'ko' ? "억만장자 당첨자들이 결국 파산하는 이유와 올바른 수령 방법." : "Why so many winners go bankrupt, and how to choose the right payout."}
+            </p>
+          </button>
+
+          {/* Card 4: Lucky Numbers */}
+          <button onClick={onGoToLucky} className="group flex flex-col items-start p-5 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-sm hover:shadow-md outline-none focus:ring-2" style={{ background: s.cardBg, border: `1px solid ${s.cardBorder}` }}>
+            <span className="text-2xl mb-2" aria-hidden="true">🍀</span>
+            <h4 className="font-bold text-sm md:text-base leading-tight mb-1" style={{ color: s.text }}>
+              {lang === 'ko' ? "행운의 번호라는 환상" : "The Myth of Lucky Numbers"}
+            </h4>
+            <p className="text-[11px] md:text-xs line-clamp-2" style={{ color: s.textDim }}>
+              {lang === 'ko' ? "가족 생일이나 꿈에서 본 번호는 왜 확률을 낮추는 걸까?" : "Why using family birthdays or quick picks actually hurts your payout odds."}
+            </p>
+          </button>
+
+        </div>
       </section>
 
       {/* Ad Slot */}
@@ -2929,7 +2969,18 @@ export default function App() {
           {/* Main content area with min-height to prevent footer jump */}
           <div className="flex-1 flex flex-col">
             {screen === 'start' && (
-              <StartPage onStart={handleStart} onExploreOdds={handleExploreOdds} onGoToHistory={() => { window.scrollTo(0,0); navigateTo('history'); }} jackpotData={liveJackpots} lastWinners={lastWinners} lastJackpotWinners={lastJackpotWinners} isLiveData={isLiveData} />
+              <StartPage 
+                onStart={handleStart} 
+                onExploreOdds={handleExploreOdds} 
+                onGoToHistory={() => { window.scrollTo(0,0); navigateTo('history'); }} 
+                onGoToChecklist={() => { window.scrollTo(0,0); navigateTo('checklist'); }} 
+                onGoToLucky={() => { window.scrollTo(0,0); navigateTo('lucky'); }} 
+                onGoToLumpSum={() => { window.scrollTo(0,0); navigateTo('annuity'); }} 
+                jackpotData={liveJackpots} 
+                lastWinners={lastWinners} 
+                lastJackpotWinners={lastJackpotWinners} 
+                isLiveData={isLiveData} 
+              />
             )}
             {screen === 'history' && (
               <LotteryHistory 

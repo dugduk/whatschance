@@ -2762,7 +2762,6 @@ function Results({ ticketCount, selectedGame, onTryAgain, onExploreOdds, onStart
 
       {/* SEO Footer */}
       <footer className="w-full max-w-3xl text-center text-[10px] leading-relaxed pb-4 pt-4 mt-8 border-t" style={{ color: s.textDim, borderColor: `${s.cardBorder}30` }}>
-        <p className="mb-2 font-bold" style={{ color: s.textMuted }}>{t('disclaimer', lang)}</p>
         <p>{t('seoFooter', lang)}</p>
         <p className="mt-2 opacity-30 text-[10px]">WhatsChance — Visualizing the Impossible</p>
       </footer>
@@ -3027,9 +3026,7 @@ export default function App() {
             {screen === 'taxTrivia' && (
               <TaxTrivia lang={lang} onBack={handleBackFromTaxes} />
             )}
-            <div className="mt-8">
-              <RealityCheckTicker />
-            </div>
+
           </div>
 
           {/* Legal Disclaimer — always visible */}

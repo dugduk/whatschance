@@ -2760,11 +2760,7 @@ function Results({ ticketCount, selectedGame, onTryAgain, onExploreOdds, onStart
       </button>
 
 
-      {/* SEO Footer */}
-      <footer className="w-full max-w-3xl text-center text-[10px] leading-relaxed pb-4 pt-4 mt-8 border-t" style={{ color: s.textDim, borderColor: `${s.cardBorder}30` }}>
-        <p>{t('seoFooter', lang)}</p>
-        <p className="mt-2 opacity-30 text-[10px]">WhatsChance — Visualizing the Impossible</p>
-      </footer>
+
     </main>
   )
 }

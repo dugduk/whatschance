@@ -2,7 +2,7 @@ import React from 'react';
 import { useLang, useTheme, AdPlaceholder } from './App.jsx';
 import { t } from './translations.js';
 
-export default function JackpotChecklist({ onGoBack, onNext }) {
+export default function LumpSumAnnuity({ onGoBack, onNext }) {
   const { theme } = useTheme();
   const { lang } = useLang();
   const isDark = theme === 'dark';
@@ -11,7 +11,7 @@ export default function JackpotChecklist({ onGoBack, onNext }) {
     <div className="w-full flex-1 flex flex-col bg-transparent pb-16">
       
       {/* Header Navigation */}
-      <div className="w-full max-w-3xl mx-auto px-4 pt-6 pb-2 flex justify-between items-center">
+      <div className="w-full max-w-3xl mx-auto px-4 pt-6 pb-2">
         <button
           onClick={onGoBack}
           className="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
@@ -31,73 +31,69 @@ export default function JackpotChecklist({ onGoBack, onNext }) {
         {/* Title Section */}
         <div className="text-center mb-10">
           <img 
-            src="/images/checklist_hero.png" 
-            alt="The Ultimate Jackpot Checklist" 
+            src="/images/annuity_hero.png" 
+            alt="Lump Sum vs Annuity" 
             className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-8 shadow-2xl border border-white/10"
           />
           <h1 className="text-3xl md:text-4xl font-black mb-4 tracking-tight"
               style={{ color: isDark ? '#fff' : '#111' }}>
-            {t('checklistTitle', lang)}
+            {t('annuityTitle', lang)}
           </h1>
           <p className="text-lg md:text-xl leading-relaxed"
              style={{ color: isDark ? '#aaa' : '#555' }}>
-            {t('checklistIntro', lang)}
+            {t('annuityIntro', lang)}
           </p>
         </div>
 
         <AdPlaceholder className="mb-10 w-full" />
 
-        {/* Step 1 */}
+        {/* Portions */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ef4444' : '#dc2626' }}>
-            {t('step1Title', lang)}
+          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#3b82f6' : '#1d4ed8' }}>
+            {t('annPoint1Title', lang)}
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
-            {t('step1Desc', lang)}
+            {t('annPoint1Desc', lang)}
           </p>
         </section>
 
-        {/* Step 2 */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ef4444' : '#dc2626' }}>
-            {t('step2Title', lang)}
+          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#3b82f6' : '#1d4ed8' }}>
+            {t('annPoint2Title', lang)}
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
-            {t('step2Desc', lang)}
-          </p>
-        </section>
-
-        <AdPlaceholder className="mb-12 w-full" />
-
-        {/* Step 3 */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ef4444' : '#dc2626' }}>
-            {t('step3Title', lang)}
-          </h2>
-          <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
-            {t('step3Desc', lang)}
-          </p>
-        </section>
-
-        {/* Step 4 */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ef4444' : '#dc2626' }}>
-            {t('step4Title', lang)}
-          </h2>
-          <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
-            {t('step4Desc', lang)}
+            {t('annPoint2Desc', lang)}
           </p>
         </section>
 
         <AdPlaceholder className="mb-12 w-full" />
 
-        {/* Step 5 */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ef4444' : '#dc2626' }}>
-            {t('step5Title', lang)}
+          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#3b82f6' : '#1d4ed8' }}>
+            {t('annPoint3Title', lang)}
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
-            {t('step5Desc', lang)}
+            {t('annPoint3Desc', lang)}
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#3b82f6' : '#1d4ed8' }}>
+            {t('annPoint4Title', lang)}
+          </h2>
+          <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
+            {t('annPoint4Desc', lang)}
+          </p>
+        </section>
+
+        <AdPlaceholder className="mb-12 w-full" />
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#3b82f6' : '#1d4ed8' }}>
+            {t('annPoint5Title', lang)}
+          </h2>
+          <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
+            {t('annPoint5Desc', lang)}
           </p>
         </section>
 

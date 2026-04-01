@@ -737,7 +737,51 @@ const T = {
     ko: '거주하는 주의 법을 확인하세요. 많은 주에서는 신탁이나 LLC를 통해 이름을 숨기고 수령하는 것을 허용합니다. 익명성은 당신의 안전을 지켜줄 가장 강력한 자산입니다.', 
     es: 'Muchos estados permiten cobrar mediante un fideicomiso ciego o LLC para mantener el anonimato.' 
   },
-  nextArticle: { en: 'Next Guide: How to handle the money', ko: '다음 가이드: 돈을 관리하는 현실적인 법', es: 'Próxima guía: Cómo manejar el dinero' }
+  nextArticle: { en: 'Next Guide: How to handle the money', ko: '다음 가이드: 돈을 관리하는 현실적인 법', es: 'Próxima guía: Cómo manejar el dinero' },
+
+  // ─── Lump Sum vs Annuity ───
+  annuityBtnTitle: { 
+    en: 'Lump Sum vs. Annuity: The $100M Question ⚖️', 
+    ko: '일시불 vs 연금형: 1,000억 원의 갈림길 ⚖️', 
+    es: 'Suma Global vs Anualidad: El Dilema de los $100M ⚖️' 
+  },
+  annuityTitle: { en: 'Lump Sum or Annuity? The $100M Debate', ko: '일시불 vs 연금형: 어떤 선택이 옳은가?', es: 'Suma Global o Anualidad' },
+  annuityIntro: { 
+    en: 'One is immediate power, the other is 30 years of security. Let’s break down the math, the taxes, and the psychology behind the richest decision of your life.', 
+    ko: '하나는 즉각적인 권력이고, 다른 하나는 30년의 안전입니다. 인생에서 가장 비싼 결정 뒤에 숨겨진 수학, 세금, 그리고 심리학을 분석해 드립니다.', 
+    es: 'Uno es poder inmediato, el otro es 30 años de seguridad. Analicemos las matemáticas, los impuestos y la psicología.' 
+  },
+  annPoint1Title: { en: '1. The Power of "NOW"', ko: '1. "지금 당장"의 힘 (현금 유동성)', es: '1. El Poder del AHORA' },
+  annPoint1Desc: { 
+    en: 'Choosing the lump sum gives you immediate access to your fortune. This is the choice for those who trust their investment skills more than the lottery’s 5% guaranteed annual growth.', 
+    ko: '일시불은 당첨금의 약 60%를 즉시 수령합니다. 복권국이 보장하는 연 5% 복리 수익보다 자신의 투자 실력을 더 믿는 고수들의 선택지입니다.', 
+    es: 'Elegir la suma global te da acceso inmediato a tu fortuna. Es para quienes confían en sus habilidades de inversión.' 
+  },
+  annPoint2Title: { en: '2. The 5% Compounding Shield', ko: '2. 연 5% 복리의 방패', es: '2. El Escudo del 5%' },
+  annPoint2Desc: { 
+    en: 'The annuity pays out over 30 years, with payments increasing by 5% annually. It effectively forces you to be disciplined and acts as an insurance policy against going bankrupt.', 
+    ko: '연금형은 30년에 걸쳐 지급되며 매년 5%씩 늘어납니다. 이는 강제적인 지출 통제 역할을 하며, 나중에 알거지가 되는 것을 방지하는 보험과 같습니다.', 
+    es: 'La anualidad se paga durante 30 años, aumentando un 5% anual. Te obliga a ser disciplinado.' 
+  },
+  annPoint3Title: { en: '3. Inflation vs. Guaranteed Growth', ko: '3. 인플레이션 vs 보장된 수익', es: '3. Inflación vs Crecimiento' },
+  annPoint3Desc: { 
+    en: 'Critics point to inflation devaluing future dollars. However, the lottery’s 5% annual bump is very competitive unless inflation stays above 5% for three decades.', 
+    ko: '연금의 단점은 물가 상승입니다. 하지만 복권의 연 5% 증액은 꽤 강력한 수익률입니다. 물가 상승률이 30년 내내 5%를 넘지 않는 한 연금이 총액면에서 유리합니다.', 
+    es: 'La inflación devalúa el dinero futuro, pero el aumento del 5% es competitivo históricamente.' 
+  },
+  annPoint4Title: { en: '4. The Tax Gamble', ko: '4. 미래 세율의 불확실성', es: '4. El Juego de los Impuestos' },
+  annPoint4Desc: { 
+    en: 'With a lump sum, you pay today’s tax rates. With an annuity, you bet that tax rates won’t skyrocket over 30 years. If taxes double, your future checks shrink.', 
+    ko: '일시불은 오늘의 세율로 끝납니다. 반면 연금은 향후 30년간 세금이 오르지 않기를 빌어야 합니다. 10년 뒤 세금이 폭등하면 당신의 수령액은 줄어듭니다.', 
+    es: 'Con la suma global, pagas impuestos hoy. Con la anualidad, apuestas a que las tasas no subirán en 30 años.' 
+  },
+  annPoint5Title: { en: '5. Estate Planning & Early Death', ko: '5. 사후 재산권과 상속', es: '5. Planificación Patrimonial' },
+  annPoint5Desc: { 
+    en: 'If you die while receiving the annuity, remaining payments go to your heirs. However, managing a 30-year stream can be legally messy compared to a lump sum in a trust.', 
+    ko: '연금 수령 중 사망하면 남은 금액은 상속됩니다. 하지만 상속인들에게 30년 치 현금을 관리하게 하는 것은 복잡한 법적 문제를 야기할 수 있습니다.', 
+    es: 'Si mueres, los pagos restantes van a tus herederos. Pero manejar pagos por 30 años es legalmente complejo.' 
+  },
+  nextArticleAnnuity: { en: 'Next Guide: Science of "Lucky" Numbers', ko: '다음 가이드: "운 좋은 번호"의 과학적 진실', es: 'Próxima guía: Ciencia de los Números de la Suerte' }
 }
 
 

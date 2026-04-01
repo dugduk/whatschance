@@ -2764,11 +2764,6 @@ function Results({ ticketCount, selectedGame, onTryAgain, onExploreOdds, onStart
       <footer className="w-full max-w-3xl text-center text-[10px] leading-relaxed pb-4 pt-4 mt-8 border-t" style={{ color: s.textDim, borderColor: `${s.cardBorder}30` }}>
         <p className="mb-2 font-bold" style={{ color: s.textMuted }}>{t('disclaimer', lang)}</p>
         <p>{t('seoFooter', lang)}</p>
-      </footer>
-
-      {/* SEO Footer */}
-      <footer className="w-full max-w-3xl text-center text-[11px] leading-relaxed pb-6 pt-4 mt-4" style={{ color: s.textDim, borderTop: `1px solid ${s.cardBorder}20` }}>
-        <p>{t('seoFooter', lang)}</p>
         <p className="mt-2 opacity-30 text-[10px]">WhatsChance — Visualizing the Impossible</p>
       </footer>
     </main>

@@ -48,7 +48,7 @@ export default function LotteryHistory({ onGoBack, onNext }) {
             {t('hist1Title', lang)}
           </h2>
           <img 
-            src="/images/hist_1.png" 
+            src="/images/hist_1.jpg" 
             alt="Funding the Great Wall" 
             className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-6 shadow-2xl border border-white/10 hover:scale-[1.01] transition-transform duration-500"
           />
@@ -66,7 +66,7 @@ export default function LotteryHistory({ onGoBack, onNext }) {
             {t('hist2Title', lang)}
           </h2>
           <img 
-            src="/images/hist_2.png" 
+            src="/images/hist_2.jpg" 
             alt="Ivy League Founders" 
             className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-6 shadow-2xl border border-white/10 hover:scale-[1.01] transition-transform duration-500"
           />
@@ -84,7 +84,7 @@ export default function LotteryHistory({ onGoBack, onNext }) {
             {t('hist3Title', lang)}
           </h2>
           <img 
-            src="/images/hist_3.png" 
+            src="/images/hist_3.jpg" 
             alt="Modern Lottery Machine" 
             className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-6 shadow-2xl border border-white/10 hover:scale-[1.01] transition-transform duration-500"
           />
@@ -102,7 +102,7 @@ export default function LotteryHistory({ onGoBack, onNext }) {
             {t('hist4Title', lang)}
           </h2>
           <img 
-            src="/images/hist_4.png" 
+            src="/images/hist_4.jpg" 
             alt="The Law of Truly Large Numbers" 
             className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-6 shadow-2xl border border-white/10 hover:scale-[1.01] transition-transform duration-500"
           />

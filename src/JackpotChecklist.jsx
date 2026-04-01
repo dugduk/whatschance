@@ -31,7 +31,7 @@ export default function JackpotChecklist({ onGoBack, onNext }) {
         {/* Title Section */}
         <div className="text-center mb-10">
           <img 
-            src="/images/checklist_hero.png" 
+            src="/images/checklist_hero.jpg" 
             alt="The Ultimate Jackpot Checklist" 
             className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-8 shadow-2xl border border-white/10"
           />

@@ -31,7 +31,7 @@ export default function LuckyNumbers({ onGoBack, onFinish }) {
         {/* Title Section */}
         <div className="text-center mb-10">
           <img 
-            src="/images/lucky_hero.png" 
+            src="/images/lucky_hero.jpg" 
             alt="The Science of Lucky Numbers" 
             className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-8 shadow-2xl border border-white/10"
           />

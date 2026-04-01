@@ -31,7 +31,7 @@ export default function LumpSumAnnuity({ onGoBack, onNext }) {
         {/* Title Section */}
         <div className="text-center mb-10">
           <img 
-            src="/images/annuity_hero.png" 
+            src="/images/annuity_hero.jpg" 
             alt="Lump Sum vs Annuity" 
             className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-8 shadow-2xl border border-white/10"
           />

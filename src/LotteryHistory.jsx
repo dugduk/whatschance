@@ -47,8 +47,11 @@ export default function LotteryHistory({ onGoBack }) {
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>
             {t('hist1Title', lang)}
           </h2>
-          <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
+          <p className="text-lg leading-relaxed mb-3" style={{ color: isDark ? '#ddd' : '#333' }}>
             {t('hist1Desc', lang)}
+          </p>
+          <p className="text-sm italic" style={{ color: isDark ? '#888' : '#777' }}>
+            {t('hist1Source', lang)}
           </p>
         </section>
 
@@ -57,8 +60,11 @@ export default function LotteryHistory({ onGoBack }) {
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>
             {t('hist2Title', lang)}
           </h2>
-          <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
+          <p className="text-lg leading-relaxed mb-3" style={{ color: isDark ? '#ddd' : '#333' }}>
             {t('hist2Desc', lang)}
+          </p>
+          <p className="text-sm italic" style={{ color: isDark ? '#888' : '#777' }}>
+            {t('hist2Source', lang)}
           </p>
         </section>
 
@@ -69,8 +75,11 @@ export default function LotteryHistory({ onGoBack }) {
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>
             {t('hist3Title', lang)}
           </h2>
-          <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
+          <p className="text-lg leading-relaxed mb-3" style={{ color: isDark ? '#ddd' : '#333' }}>
             {t('hist3Desc', lang)}
+          </p>
+          <p className="text-sm italic" style={{ color: isDark ? '#888' : '#777' }}>
+            {t('hist3Source', lang)}
           </p>
         </section>
 
@@ -79,8 +88,11 @@ export default function LotteryHistory({ onGoBack }) {
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>
             {t('hist4Title', lang)}
           </h2>
-          <p className="text-lg leading-relaxed" style={{ color: isDark ? '#ddd' : '#333' }}>
+          <p className="text-lg leading-relaxed mb-3" style={{ color: isDark ? '#ddd' : '#333' }}>
             {t('hist4Desc', lang)}
+          </p>
+          <p className="text-sm italic" style={{ color: isDark ? '#888' : '#777' }}>
+            {t('hist4Source', lang)}
           </p>
         </section>
 

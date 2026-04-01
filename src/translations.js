@@ -641,6 +641,11 @@ const T = {
     ko: "최초의 복권 형태는 기원전 205년~187년 중국 한나라 시대까지 거슬러 올라갑니다. 당시 초기 형태의 '키노(Keno)' 복권은 만리장성 건설을 포함한 대규모 국가 프로젝트 자금을 조달하는 데 사용되었습니다. 즉, 당신은 단순히 티켓을 사는 게 아니라 2,000년이나 된 '자발적 납세' 전통에 참여하고 있는 셈입니다!", 
     es: "Los primeros signos de lotería se remontan a la dinastía Han en China. Se cree que estos boletos ayudaron a financiar importantes proyectos, incluida la Gran Muralla China." 
   },
+  hist1Source: { 
+    en: "Source: Historical Records of the Han Dynasty", 
+    ko: "출처: 중국 한나라 역사 기록서", 
+    es: "Fuente: Registros Históricos de la Dinastía Han" 
+  },
 
   hist2Title: { 
     en: "2. Building the Ivy League with Lottery Money", 
@@ -651,6 +656,11 @@ const T = {
     en: "In colonial America, lotteries were incredibly popular and respectable. Benjamin Franklin used lotteries to pay for cannons to defend Philadelphia. Even more shocking? Elite universities like Harvard, Yale, Princeton, and Columbia were substantially funded through lottery campaigns in the 1700s. Without gamblers hoping for a breakout payout, America's finest educational institutions might look very different today.", 
     ko: "미국 식민지 시대에 복권은 대단히 인기 있고 당당한 사업이었습니다. 벤자민 프랭클린은 필라델피아 방어를 위한 대포를 사기 위해 주 정부 복권을 발행했죠. 더 충격적인 사실은 하버드, 예일, 프린스턴, 콜롬비아 같은 자존심 높은 최고급 명문 대학들이 1700년대 복권 수익금으로 세워졌다는 것입니다. 인생 역전을 꿈꾸던 사람들이 없었다면 오늘날 미국의 명문대들은 존재하지 않았을 수도 있습니다.", 
     es: "En la América colonial, universidades de élite como Harvard, Yale y Princeton fueron financiadas en gran parte mediante campañas de lotería en los años 1700." 
+  },
+  hist2Source: { 
+    en: "Source: Harvard University Archives & 'Lotteries in Colonial America'", 
+    ko: "출처: 하버드 대학교 기록 보관소 및 '아메리카 식민지 시대의 복권'", 
+    es: "Fuente: Archivos de la Universidad de Harvard" 
   },
 
   hist3Title: { 
@@ -663,6 +673,11 @@ const T = {
     ko: "파워볼은 1992년에 '로또 아메리카'를 대체하며 시작되었고, 메가 밀리언스는 1996년 '더 빅 게임'으로 시작했죠. 그런데 왜 요즘 잭팟 금액이 1조 원, 2조 원씩 천문학적으로 커졌을까요? 2015년과 2017년, 두 복권 위원회는 고의로 당첨 숫자 범위를 대폭 늘려 1등 당첨 확률을(1억 7500만 분의 1에서 2억 9200만 분의 1 이상으로) 악랄하게 낮췄습니다. 아무도 당첨되지 않아 금액이 계속 이월되어야 전 세계 언론을 장식하는 '빌리언 달러 잭팟'이 쓰여지고, 역대급 판매량을 올릴 수 있기 때문입니다.", 
     es: "Powerball comenzó en 1992 y Mega Millions en 1996. Recientemente, ambos hicieron intencionalmente más difícil ganar el premio mayor para crear premios acumulados de más de $1B." 
   },
+  hist3Source: { 
+    en: "Source: Official Mega Millions (2017) and Powerball (2015) Rule Change Documents", 
+    ko: "출처: 메가 밀리언스(2017) 및 파워볼(2015) 공식 규정 변경 문서", 
+    es: "Fuente: Documentos Oficiales de Cambio de Reglas de Mega Millions y Powerball" 
+  },
 
   hist4Title: { 
     en: "4. The Bizarre Math of Winning Multiple Times", 
@@ -673,6 +688,11 @@ const T = {
     en: "You might hear of someone winning the lottery twice in one lifetime and think, 'That’s completely rigged or a simulation glitch!' Actually, statistician Stephen Samuels mathematically calculated that given the millions of people who regularly purchase tickets worldwide every single week, it is actually highly probable—even expected—that a handful of individuals will win multiple massive jackpots. It's known as the 'Law of Truly Large Numbers'. It just means some people truly scoop out all the luck in the universe.", 
     ko: "어떤 사람이 복권 1등에 두 번이나 당첨됐다는 뉴스를 보면 '이거 무조건 조작이네!'라고 생각하시겠죠. 하지만 통계학자 스티븐 사무엘스에 따르면 전 세계적으로 매주 수천만 명이 정기적으로 복권을 산다는 점을 감안할 때, 누군가 평생 두 번 이상의 잭팟을 터뜨리는 것은 수학적으로 '매우 정상적이고 100% 일어날 수밖에 없는' 현상이라고 합니다. 이를 통계학에서는 '진정으로 큰 수의 법칙'이라고 부릅니다. 누군가는 정말로 우주의 행운을 싹싹 긁어간다는 뜻이죠.", 
     es: "Dada la cantidad de personas que compran boletos, es matemáticamente probable que algunas ganen varias veces. Es la 'Ley de los Números Verdaderamente Grandes'." 
+  },
+  hist4Source: { 
+    en: "Source: Dr. Stephen Samuels, Professor Emeritus of Statistics, Purdue University", 
+    ko: "출처: 퍼듀 대학교 통계학 및 수학 명예교수, 스티븐 사무엘스 박사 (Dr. Stephen Samuels)", 
+    es: "Fuente: Dr. Stephen Samuels, Profesor Emérito de Estadística, Universidad de Purdue" 
   }
 }
 

@@ -2810,7 +2810,8 @@ function Results({ ticketCount, selectedGame, onTryAgain, onExploreOdds, onStart
 // ============================================================
 
 export default function App() {
-  const [screen, setScreen] = useState('start')
+  // Initialize screen from Hash if present (for SEO and Refresh persistence)
+  const [screen, setScreen] = useState(() => window.location.hash.replace('#', '') || 'start')
   const [prevScreen, setPrevScreen] = useState('start')
   const [selectedGame, setSelectedGame] = useState('megaMillions')
   const [ticketCount, setTicketCount] = useState(5)
@@ -2899,6 +2900,18 @@ export default function App() {
     return () => clearInterval(interval)
   }, [])
 
+  // Sync state with Browser Hash changes (Back/Forward buttons)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const h = window.location.hash.replace('#', '') || 'start'
+      if (h !== screen) {
+        setScreen(h)
+      }
+    }
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [screen])
+
   // Dynamic SEO & Document Title
   useEffect(() => {
     if (screen === 'stateTaxes') {
@@ -2932,7 +2945,15 @@ export default function App() {
   const navigateTo = useCallback((newScreen) => {
     playAppPop();
     setPrevScreen(screen)
-    setScreen(newScreen)
+    
+    // Update hash to allow refresh persistence and SEO
+    if (window.location.hash.replace('#', '') !== newScreen) {
+      window.location.hash = newScreen
+    } else {
+      // If same hash, handle manually
+      setScreen(newScreen)
+    }
+    
     window.scrollTo(0, 0)
   }, [screen, playAppPop])
 

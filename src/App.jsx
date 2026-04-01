@@ -5,6 +5,7 @@ import LotterySimulator from './lottery_simulator.jsx'
 import LotteryHistory from './LotteryHistory.jsx'
 import JackpotChecklist from './JackpotChecklist.jsx'
 import LumpSumAnnuity from './LumpSumAnnuity.jsx'
+import LuckyNumbers from './LuckyNumbers.jsx'
 import { t, tRaw } from './translations.js'
 import html2canvas from 'html2canvas'
 import { STATE_TAX_RATES } from './data/stateTaxRates'
@@ -2938,7 +2939,13 @@ export default function App() {
             {screen === 'annuity' && (
               <LumpSumAnnuity 
                 onGoBack={() => { window.scrollTo(0,0); navigateTo('checklist'); }}
-                onNext={() => { window.scrollTo(0,0); navigateTo('selection'); }} // Provisional until next article
+                onNext={() => { window.scrollTo(0,0); navigateTo('lucky'); }}
+              />
+            )}
+            {screen === 'lucky' && (
+              <LuckyNumbers 
+                onGoBack={() => { window.scrollTo(0,0); navigateTo('annuity'); }}
+                onFinish={() => { window.scrollTo(0,0); navigateTo('selection'); }}
               />
             )}
             {screen === 'selection' && (

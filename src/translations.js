@@ -781,7 +781,51 @@ const T = {
     ko: '연금 수령 중 사망하면 남은 금액은 상속됩니다. 하지만 상속인들에게 30년 치 현금을 관리하게 하는 것은 복잡한 법적 문제를 야기할 수 있습니다.', 
     es: 'Si mueres, los pagos restantes van a tus herederos. Pero manejar pagos por 30 años es legalmente complejo.' 
   },
-  nextArticleAnnuity: { en: 'Next Guide: Science of "Lucky" Numbers', ko: '다음 가이드: "운 좋은 번호"의 과학적 진실', es: 'Próxima guía: Ciencia de los Números de la Suerte' }
+  nextArticleAnnuity: { en: 'Next Guide: Science of "Lucky" Numbers', ko: '다음 가이드: "운 좋은 번호"의 과학적 진실', es: 'Próxima guía: Ciencia de los Números de la Suerte' },
+
+  // ─── Science of Lucky Numbers ───
+  luckyBtnTitle: { 
+    en: 'The Science of "Lucky" Numbers 🍀', 
+    ko: '행운의 숫자에 숨겨진 과학적(?) 진실 🍀', 
+    es: 'La Ciencia de los Números de la Suerte 🍀' 
+  },
+  luckyTitle: { en: 'Do "Lucky" Numbers Truly Exist?', ko: '행운의 숫자는 정말로 존재할까?', es: '¿Existen los Números de la Suerte?' },
+  luckyIntro: { 
+    en: 'We pick birthdates, anniversaries, and "hot" numbers. But the math doesn’t care about your stories. Let’s look at why your favorite numbers might actually be hurting your jackpot.', 
+    ko: '우리는 생일, 기념일, 그리고 "많이 나온 숫자"를 고릅니다. 하지만 수학은 당신의 사연에 관심이 없습니다. 당신이 좋아하는 숫자가 왜 당첨 시 손해를 보게 만드는지 분석해 드립니다.', 
+    es: 'Elegimos fechas de nacimiento y números "calientes". Pero a las matemáticas no les importan tus historias.' 
+  },
+  lucky1Title: { en: '1. The "Hot & Cold" Fallacy', ko: '1. "많이 나온 번호"의 함정 (도박꾼의 오류)', es: '1. La Falacia de Caliente y Frío' },
+  lucky1Desc: { 
+    en: 'Every draw is a 100% fresh start. The machine has no memory. Just because "42" came out last week doesn’t mean it’s "due" or "hot". Past results are mathematically irrelevant to future outcomes.', 
+    ko: '모든 추첨은 100% 새로운 시작입니다. "42번"이 지난주에 나왔다고 해서 이번 주에 또 나오거나 안 나올 확률이 달라지지 않습니다. 과거 결과는 미래와 아무런 상관이 없습니다.', 
+    es: 'Cada sorteo es un comienzo fresco. La máquina no tiene memoria.' 
+  },
+  lucky2Title: { en: '2. The Birthdate Jam (1-31)', ko: '2. 생일 번호의 대혼잡 (1-31)', es: '2. El Congestionamiento de Fechas' },
+  lucky2Desc: { 
+    en: 'Most people pick dates (1-31). If you only pick these, you are increasing the chance of sharing the jackpot with 50 others. Numbers above 31 are your "Anonymity Zone."', 
+    ko: '대부분은 날짜(1-31)를 기준으로 번호를 고릅니다. 1~31 사이의 숫자만 고르면 만약 당첨되었을 때 수십 명과 당첨금을 나눠 가질 확률이 엄청나게 높아집니다. 32번 이상이 당신의 방어 구역입니다.', 
+    es: 'Casi todos eligen fechas (1-31). Los números por encima de 31 son tu "Zona de Anonimato".' 
+  },
+  lucky3Title: { en: '3. Patterns are Traps', ko: '3. 패턴은 곧 독이다', es: '3. Los Patrones son Trampas' },
+  lucky3Desc: { 
+    en: 'Picking 1-2-3-4-5-6 or a diagonal? Thousands of others are doing the same. If those numbers hit, a $100M jackpot could turn into a $10,000 payout because so many share the prize.', 
+    ko: '1-2-3-4-5-6 같은 연속 숫자나 대각선 패턴은 수천 명의 다른 사람들도 똑같이 하고 있습니다. 만약 당첨된다면 보잘것없는 푼돈으로 전락할 것입니다.', 
+    es: 'Elegir 1-2-3-4-5-6 o diagonales es un error. Miles lo hacen. El premio se dividiría entre demasiados.' 
+  },
+  lucky4Title: { en: '4. The "Quick Pick" Reality', ko: '4. "자동 선택"의 진실', es: '4. La Realidad del "Automático"' },
+  lucky4Desc: { 
+    en: 'Over 70% of winners use Quick Pick. Is it luckier? No. It’s just that 70-80% of tickets sold are Quick Picks. The math is the same, but it helps avoid common psychological picking traps.', 
+    ko: '당첨자의 70% 이상이 자동입니다. 자동이 더 운이 좋을까요? 아닙니다. 그저 판매량의 70~80%가 자동이기 때문입니다. 다만, 자동 선택은 인간의 심리적 고정관념을 피하게 해줍니다.', 
+    es: 'Más del 70% de los ganadores usan Automático. No es que tenga más suerte, es que se venden más boletos así.' 
+  },
+  lucky5Title: { en: '5. The Brutal Truth', ko: '5. 무작위성의 잔인한 진실', es: '5. La Verdad Brutal' },
+  lucky5Desc: { 
+    en: 'The universe is indifferent. There is no pattern or magic formula. The only way to guarantee a win is to buy every combination, which costs more than the jackpot. Play for fun.', 
+    ko: '우주는 당신에게 관심이 없습니다. 명당도, 비결도 없습니다. 당첨을 보장받는 유일한 방법은 모든 조합을 다 사는 것이며, 그 비용은 잭팟보다 비쌉니다. 복권은 오락으로 즐기세요.', 
+    es: 'El universo es indiferente. No hay fórmulas mágicas. Juega por diversión.' 
+  },
+  finishGuides: { en: 'Check My Odds Now!', ko: '나의 현실적인 당첨 확률 확인하기!', es: '¡Ver mis probabilidades ahora!' }
 }
 
 

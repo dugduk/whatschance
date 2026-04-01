@@ -84,8 +84,6 @@ export default function LuckyNumbers({ onGoBack, onFinish }) {
           </p>
         </section>
 
-        <AdPlaceholder className="mb-12 w-full" />
-
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#10b981' : '#059669' }}>
             {t('lucky5Title', lang)}
@@ -94,6 +92,8 @@ export default function LuckyNumbers({ onGoBack, onFinish }) {
             {t('lucky5Desc', lang)}
           </p>
         </section>
+
+        <AdPlaceholder className="mt-8 mb-8 w-full" />
 
         {/* Final Button */}
         <div className="text-center mt-12 pb-20">

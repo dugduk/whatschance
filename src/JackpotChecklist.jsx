@@ -87,8 +87,6 @@ export default function JackpotChecklist({ onGoBack, onNext }) {
           </p>
         </section>
 
-        <AdPlaceholder className="mb-12 w-full" />
-
         {/* Step 5 */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ef4444' : '#dc2626' }}>
@@ -98,6 +96,8 @@ export default function JackpotChecklist({ onGoBack, onNext }) {
             {t('step5Desc', lang)}
           </p>
         </section>
+
+        <AdPlaceholder className="mt-8 mb-8 w-full" />
 
         {/* Bottom Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 px-4 py-8 pb-16">

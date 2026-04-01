@@ -6,8 +6,8 @@
     "ticketPrice": 5
   },
   "powerball": {
-    "amount": 101,
-    "cashOption": 46,
+    "amount": 194,
+    "cashOption": 87.1,
     "nextDrawing": "Wed, Mar 18, 2026",
     "ticketPrice": 2
   }

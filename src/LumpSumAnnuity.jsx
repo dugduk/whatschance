@@ -66,8 +66,6 @@ export default function LumpSumAnnuity({ onGoBack, onNext }) {
           </p>
         </section>
 
-        <AdPlaceholder className="mb-12 w-full" />
-
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#3b82f6' : '#1d4ed8' }}>
             {t('annPoint3Title', lang)}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo, createContext, useContext } from 'react'
+import React, { useState, useEffect, useCallback, useMemo, useRef, createContext, useContext } from 'react'
 import OddsBreakdown from './OddsBreakdown.jsx'
 import ZodiacFortune from './ZodiacFortune.jsx'
 import LotterySimulator from './lottery_simulator.jsx'
@@ -924,10 +924,24 @@ export function AdPlaceholder({ className = "" }) {
   const { theme } = useTheme();
   const { lang } = useLang();
   const isDark = theme === 'dark';
+  const adRef = useRef(null);
+  const [adLoaded, setAdLoaded] = useState(false);
 
   useEffect(() => {
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      if (adRef.current && adRef.current.childElementCount === 0) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+      // Check if ad actually rendered after a short delay
+      const timer = setTimeout(() => {
+        if (adRef.current) {
+          const ins = adRef.current.querySelector('ins.adsbygoogle');
+          if (ins && ins.dataset.adStatus === 'filled') {
+            setAdLoaded(true);
+          }
+        }
+      }, 1500);
+      return () => clearTimeout(timer);
     } catch (e) {
       console.error('AdSense Error', e);
     }
@@ -936,28 +950,49 @@ export function AdPlaceholder({ className = "" }) {
   return (
     <div className={`w-full max-w-3xl mx-auto ${className}`}>
       <div
-        className="rounded-lg flex flex-col items-center justify-center py-2 px-2 overflow-hidden"
+        ref={adRef}
+        className="rounded-lg flex flex-col items-center justify-center overflow-hidden"
         style={{
-          border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
-          background: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)'
+          border: `1px solid ${isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.05)'}`,
+          background: isDark ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)',
+          maxHeight: '100px',
+          padding: '4px 8px',
         }}
       >
         <span
-          className="text-[10px] uppercase tracking-[0.2em] font-medium mb-1"
-          style={{ color: isDark ? '#444' : '#bbb' }}
+          className="text-[9px] uppercase tracking-[0.2em] font-medium"
+          style={{ color: isDark ? '#333' : '#ccc', marginBottom: '2px' }}
         >
           {t('advertisement', lang)}
         </span>
-        <div className="w-full flex items-center justify-center overflow-hidden min-h-[50px] md:min-h-[90px]">
+        <div className="w-full flex items-center justify-center overflow-hidden" style={{ height: '70px', maxHeight: '70px' }}>
           <ins
             className="adsbygoogle"
-            style={{ display: 'block', width: '100%' }}
+            style={{ display: 'block', width: '100%', height: '70px' }}
             data-ad-client="ca-pub-5455444576155986"
             data-ad-slot="5868515153"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
+            data-ad-format="horizontal"
+            data-full-width-responsive="false"
           />
         </div>
+        {/* Dev fallback: visible placeholder when AdSense doesn't load (localhost) */}
+        {!adLoaded && (
+          <div
+            className="w-full flex items-center justify-center rounded"
+            style={{
+              height: '70px',
+              background: isDark
+                ? 'linear-gradient(90deg, rgba(255,215,0,0.03) 0%, rgba(255,215,0,0.06) 50%, rgba(255,215,0,0.03) 100%)'
+                : 'linear-gradient(90deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.04) 50%, rgba(0,0,0,0.02) 100%)',
+              border: `1px dashed ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)'}`,
+              marginTop: '-70px',
+            }}
+          >
+            <span style={{ color: isDark ? '#2a2a2a' : '#ddd', fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em' }}>
+              AD BANNER
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -1556,9 +1591,6 @@ function TicketSelection({ onCheckOdds, selectedGame, setSelectedGame, onExplore
         🎰 {t('nextDrawing', lang, { date: currentJackpotData.nextDrawing, amount: currentJackpotData.amount })}
       </p>
 
-      {/* Ad: Top placement */}
-      <AdPlaceholder className="mb-8" />
-
       {/* Tier Cards */}
       <section className="w-full max-w-3xl grid grid-cols-3 gap-3 md:gap-6 mb-6" aria-label="Ticket tier selection">
         {TIERS.map(tier => {
@@ -1641,9 +1673,6 @@ function TicketSelection({ onCheckOdds, selectedGame, setSelectedGame, onExplore
           )
         })}
       </section>
-
-      {/* Ad: Middle placement */}
-      <AdPlaceholder className="mb-6" />
 
       {/* Current count + cost display */}
       <div
@@ -1821,11 +1850,6 @@ function TaxInfoBlog({ lang, onBack }) {
           {/* Interactive US Map */}
           <USMap />
 
-          {/* Mid-blog Ad placement */}
-          <div className="my-10">
-            <AdPlaceholder className="w-full" />
-          </div>
-
           {/* Ranking List */}
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
             <span className="text-2xl">📉</span> {t('taxBlogRankingHeader', lang)}
@@ -1932,9 +1956,6 @@ function TaxTrivia({ lang, onBack }) {
               {t('triviaNYCDesc', lang)}
             </p>
           </div>
-
-          {/* AD PLACEHOLDER ADDED HERE */}
-          <AdPlaceholder className="my-2" />
 
           {/* Missing States Card */}
           <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-3xl p-8 md:p-10 shadow-xl transition-all hover:border-red-500/30">
@@ -2659,7 +2680,6 @@ function Results({ ticketCount, selectedGame, onTryAgain, onExploreOdds, onStart
                   </div>
 
                   <p className="text-[9px] text-center italic" style={{ color: s.textDim }}>{t('taxDisclaimer', lang)}</p>
-                  <AdPlaceholder className="mt-4" />
                 </div>
               )}
             </section>
@@ -2745,9 +2765,6 @@ function Results({ ticketCount, selectedGame, onTryAgain, onExploreOdds, onStart
         <p className="mb-2 font-bold" style={{ color: s.textMuted }}>{t('disclaimer', lang)}</p>
         <p>{t('seoFooter', lang)}</p>
       </footer>
-
-      {/* Bottom Ad Slot */}
-      <AdPlaceholder className="mt-8 mb-4" />
 
       {/* SEO Footer */}
       <footer className="w-full max-w-3xl text-center text-[11px] leading-relaxed pb-6 pt-4 mt-4" style={{ color: s.textDim, borderTop: `1px solid ${s.cardBorder}20` }}>

@@ -459,7 +459,6 @@ export default function OddsBreakdown({ onBack, onCheckJackpot, selectedGame, se
 
           return (
             <React.Fragment key={i}>
-              {i === midIndex && <AdPlaceholder className="my-3" />}
 
               <div role="listitem">
                 <button

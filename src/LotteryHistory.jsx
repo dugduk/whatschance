@@ -78,8 +78,6 @@ export default function LotteryHistory({ onGoBack, onNext }) {
           </p>
         </section>
 
-        <AdPlaceholder className="mb-12 w-full" />
-
         {/* Section 3 */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>

@@ -66,8 +66,6 @@ export default function LuckyNumbers({ onGoBack, onFinish }) {
           </p>
         </section>
 
-        <AdPlaceholder className="mb-12 w-full" />
-
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#10b981' : '#059669' }}>
             {t('lucky3Title', lang)}

@@ -1016,9 +1016,6 @@ export default function LotterySimulator() {
               >
                 {spinLabel}
               </motion.div>
-              <div className="mt-8">
-                <AdPlaceholder />
-              </div>
             </motion.div>
           )}
 
@@ -1225,9 +1222,6 @@ export default function LotterySimulator() {
                   </div>
                 </div>
               </div>
-              <div className="mt-8">
-                <AdPlaceholder />
-              </div>
             </motion.div>
           )}
 
@@ -1380,9 +1374,6 @@ export default function LotterySimulator() {
                 />
                 <span className="relative z-10">🎱 {t("revealWinningNumbersButton", lang)}</span>
               </motion.button>
-              <div className="mt-6">
-                <AdPlaceholder />
-              </div>
             </motion.div>
           )}
 
@@ -1428,9 +1419,6 @@ export default function LotterySimulator() {
                    '🎃 Small hit! Every match counts...'}
                 </motion.p>
               )}
-              <div className="mt-12">
-                <AdPlaceholder />
-              </div>
             </motion.div>
           )}
 

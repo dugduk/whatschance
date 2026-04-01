@@ -67,8 +67,6 @@ export default function JackpotChecklist({ onGoBack, onNext }) {
           </p>
         </section>
 
-        <AdPlaceholder className="mb-12 w-full" />
-
         {/* Step 3 */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ef4444' : '#dc2626' }}>

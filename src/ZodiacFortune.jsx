@@ -153,9 +153,6 @@ function SignSelection({ onSelect, onBack, onStartOver, lang }) {
         ))}
       </div>
 
-      {/* Bottom Ad */}
-      <AdPlaceholder className="mb-8" />
-
       {/* Start Over */}
       <button
         onClick={onStartOver}
@@ -190,8 +187,6 @@ function FortuneResult({ sign, fortune, isTomorrow, onCheckTomorrow, onBack, onS
 
   return (
     <main className="screen-enter min-h-screen flex flex-col items-center px-4 py-6 md:py-10">
-      {/* Top Ad */}
-      <AdPlaceholder className="mb-6" />
       {/* Back button */}
       <div className="w-full max-w-2xl mb-6">
         <button

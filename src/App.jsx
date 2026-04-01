@@ -245,7 +245,9 @@ function ComparisonCard({ item, odds, tickets, lang }) {
   }
 
   // CASE 3: Normal Probability Comparison (Low - e.g. 1 in 1M)
-  const multiplier = Math.round(item.prob / winProb)
+  const rawMultiplier = item.prob / winProb
+  const multiplier = rawMultiplier >= 10 ? Math.round(rawMultiplier) : rawMultiplier.toFixed(1)
+  const isNearEqual = rawMultiplier >= 0.85 && rawMultiplier <= 1.15
   const exactOdds = item.prob < 1 ? formatNumber(Math.round(1 / item.prob)) : '1'
 
   return (
@@ -259,16 +261,20 @@ function ComparisonCard({ item, odds, tickets, lang }) {
         })}
       </h3>
       <p className="text-white font-bold mb-3">
-        {t('lowProbMessage', lang, {
-          multiplier: multiplier < 1 ? 1 : formatNumber(multiplier),
-          fact: factText
-        })}
+        {isNearEqual ? (
+          t('aboutAsLikely', lang, { fact: factText })
+        ) : (
+          t('lowProbMessage', lang, {
+            multiplier: rawMultiplier < 1 ? multiplier : formatNumber(multiplier),
+            fact: factText
+          })
+        )}
         {" "}
         <span className="text-gray-400 font-normal">
           {t('about1in', lang, {
             exact: exactOdds
-          })}
-        </span>
+          })
+        }</span>
       </p>
       <p className="text-gray-500 text-[10px] uppercase tracking-widest italic">
         {t('sourceLabel', lang, { source: item.source })}

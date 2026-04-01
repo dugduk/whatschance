@@ -169,6 +169,11 @@ const T = {
     ko: "{fact} 확률이 {multiplier}배 더 높습니다.", 
     es: "Eres {multiplier}x más probable {fact}." 
   },
+  aboutAsLikely: {
+    en: "You are about as likely to {fact}.",
+    ko: "{fact} 확률과 거의 비슷합니다.",
+    es: "Es casi tan probable {fact}."
+  },
   highProbMessage: { 
     en: "Even with {count} tickets, your {winProb}% chance is still a gamble compared to {fact}.", 
     ko: "티켓을 {count}장이나 샀지만, {winProb}%의 확률은 {fact}에 비하면 여전히 도박일 뿐입니다.", 

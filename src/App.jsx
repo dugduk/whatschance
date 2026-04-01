@@ -3,6 +3,7 @@ import OddsBreakdown from './OddsBreakdown.jsx'
 import ZodiacFortune from './ZodiacFortune.jsx'
 import LotterySimulator from './lottery_simulator.jsx'
 import LotteryHistory from './LotteryHistory.jsx'
+import JackpotChecklist from './JackpotChecklist.jsx'
 import { t, tRaw } from './translations.js'
 import html2canvas from 'html2canvas'
 import { STATE_TAX_RATES } from './data/stateTaxRates'
@@ -2922,7 +2923,16 @@ export default function App() {
               <StartPage onStart={handleStart} onExploreOdds={handleExploreOdds} onGoToHistory={() => { window.scrollTo(0,0); navigateTo('history'); }} jackpotData={liveJackpots} lastWinners={lastWinners} lastJackpotWinners={lastJackpotWinners} isLiveData={isLiveData} />
             )}
             {screen === 'history' && (
-              <LotteryHistory onGoBack={() => { window.scrollTo(0,0); navigateTo('start'); }} />
+              <LotteryHistory 
+                onGoBack={() => { window.scrollTo(0,0); navigateTo('start'); }} 
+                onNext={() => { window.scrollTo(0,0); navigateTo('checklist'); }}
+              />
+            )}
+            {screen === 'checklist' && (
+              <JackpotChecklist 
+                onGoBack={() => { window.scrollTo(0,0); navigateTo('history'); }}
+                onNext={() => { window.scrollTo(0,0); navigateTo('selection'); }} // Provisional until next article
+              />
             )}
             {screen === 'selection' && (
               <TicketSelection

@@ -2,7 +2,7 @@ import React from 'react';
 import { useLang, useTheme, AdPlaceholder } from './App.jsx';
 import { t } from './translations.js';
 
-export default function LotteryHistory({ onGoBack }) {
+export default function LotteryHistory({ onGoBack, onNext }) {
   const { theme } = useTheme();
   const { lang } = useLang();
   const isDark = theme === 'dark';
@@ -116,21 +116,29 @@ export default function LotteryHistory({ onGoBack }) {
           </p>
         </section>
 
-        {/* Closing Ad */}
         <AdPlaceholder className="mt-8 mb-8 w-full" />
-        
-        {/* Bottom Back Button */}
-        <div className="text-center">
+
+        {/* Bottom Buttons */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 px-4 py-8">
           <button
             onClick={onGoBack}
-            className="px-8 py-4 rounded-xl font-bold text-lg transition-transform hover:scale-105"
-            style={{
-              background: isDark ? '#fff' : '#000',
-              color: isDark ? '#000' : '#fff'
-            }}
+            className="px-8 py-4 rounded-xl font-bold text-lg border border-current transition-transform hover:scale-105"
+            style={{ color: isDark ? '#fff' : '#000' }}
           >
-            ← {t('backToCalculator', lang) || t('back', lang)}
+            ← {t('back', lang)}
           </button>
+          {onNext && (
+            <button
+              onClick={onNext}
+              className="px-8 py-4 rounded-xl font-bold text-lg transition-transform hover:scale-105 shadow-xl"
+              style={{
+                background: isDark ? '#fff' : '#000',
+                color: isDark ? '#000' : '#fff'
+              }}
+            >
+              {t('nextArticle', lang)} →
+            </button>
+          )}
         </div>
 
       </div>

@@ -693,7 +693,51 @@ const T = {
     en: "Source: Dr. Stephen Samuels, Professor Emeritus of Statistics, Purdue University", 
     ko: "출처: 퍼듀 대학교 통계학 및 수학 명예교수, 스티븐 사무엘스 박사 (Dr. Stephen Samuels)", 
     es: "Fuente: Dr. Stephen Samuels, Profesor Emérito de Estadística, Universidad de Purdue" 
-  }
+  },
+
+  // ─── Jackpot Survival Guide (Checklist) ───
+  checklistBtnTitle: { 
+    en: 'Jackpot Survival Guide: What to Do First 🛑', 
+    ko: '잭팟 생존 가이드: 당첨 직후 행동 요령 🛑', 
+    es: 'Guía de Supervivencia: Qué hacer primero 🛑' 
+  },
+  checklistTitle: { en: 'The Ultimate Jackpot Checklist', ko: '지상 최대의 잭팟 체크리스트', es: 'La Guía Definitiva del Jackpot' },
+  checklistIntro: { 
+    en: 'Winning is the easy part. Managing the aftermath is where the real work begins. Follow these steps to ensure your fortune remains yours.', 
+    ko: '당첨은 쉬운 부분입니다. 진짜 도전은 그 이후의 삶을 관리하는 것이죠. 당신의 재산을 지키기 위해 이 단계를 반드시 지키세요.', 
+    es: 'Ganar es la parte fácil. Gestionar las consecuencias es donde comienza el verdadero trabajo.' 
+  },
+  step1Title: { en: '1. Silence is Golden', ko: '1. 침묵이 금이다 (절대 함구)', es: '1. El Silencio es Oro' },
+  step1Desc: { 
+    en: 'Do not tell anyone. Not your best friend, not your cousins. The more people know, the more hands will be reaching into your pocket. Keep it between you and your immediate partner if absolutely necessary.', 
+    ko: '아무에게도 말하지 마세요. 절친도, 사촌도 안 됩니다. 아는 사람이 많아질수록 당신의 주머니에 손을 뻗는 사람도 많아집니다. 정말 필요하다면 배우자 정도에게만 비밀로 유지하세요.', 
+    es: 'No se lo digas a nadie. Cuanta más gente lo sepa, más manos intentarán llegar a tu bolsillo.' 
+  },
+  step2Title: { en: '2. Secure the Physical Slip', ko: '2. 실물 티켓을 사수하라', es: '2. Asegura el Boleto Físico' },
+  step2Desc: { 
+    en: 'Sign the back of the ticket immediately (if allowed) and take photos of both sides. Then, put it in a high-security safe or a bank safety deposit box. That paper is worth hundreds of millions.', 
+    ko: '티켓 뒷면에 즉시 서명하고(허용되는 주라면), 앞뒷면을 사진으로 찍어두세요. 그 후 고성능 금고나 은행 대여금고에 보관하세요. 그 종이 한 장이 수천억 원의 가치가 있다는 걸 잊지 마세요.', 
+    es: 'Firma el reverso del boleto y guárdalo en una caja fuerte. Ese papel vale cientos de millones.' 
+  },
+  step3Title: { en: '3. Assemble Your "A-Team"', ko: '3. 최고의 "A-팀"을 꾸려라', es: '3. Reúne a tu Equipo A' },
+  step3Desc: { 
+    en: 'Hire a reputable tax attorney, a certified public accountant (CPA), and a fee-only financial planner. Do not hire "family friends"—hire professionals who have handled high-net-worth clients.', 
+    ko: '전문적인 방패가 필요합니다. 평판 좋은 조세 전문 변호사, 공인회계사(CPA), 그리고 재무 설계사를 고용하세요. "아는 지인"은 피하세요. 고액 자산가들을 다뤄본 전문가를 찾아야 합니다.', 
+    es: 'Contrata a un abogado fiscal, un contador y un planificador financiero. No contrates "amigos de la familia".' 
+  },
+  step4Title: { en: '4. Delete Social Media', ko: '4. SNS 탈퇴와 잠적', es: '4. Elimina Redes Sociales' },
+  step4Desc: { 
+    en: 'Old classmates and distant relatives will find you. Delete your public social media profiles and change your phone number. You might even want to go on a "vacation" for a few weeks.', 
+    ko: '연락 끊겼던 동창과 먼 친척들이 귀신같이 찾아낼 겁니다. 공개된 SNS 프로필을 삭제하고 전화번호를 바꾸세요. 언론의 관심이 식을 때까지 몇 주간 "잠적 휴가"를 떠나는 것도 좋은 방법입니다.', 
+    es: 'Viejos compañeros y parientes lejanos te encontrarán. Elimina tus perfiles públicos y cambia tu número.' 
+  },
+  step5Title: { en: '5. Claim via a "Trust" if Possible', ko: '5. 가능하다면 "신탁(Trust)"으로 수령하라', es: '5. Cobra a través de un Fideicomiso' },
+  step5Desc: { 
+    en: 'Many states allow winners to claim prizes through a blind trust or LLC to keep their name out of the public record. Anonymity is your greatest asset in protecting your safety.', 
+    ko: '거주하는 주의 법을 확인하세요. 많은 주에서는 신탁이나 LLC를 통해 이름을 숨기고 수령하는 것을 허용합니다. 익명성은 당신의 안전을 지켜줄 가장 강력한 자산입니다.', 
+    es: 'Muchos estados permiten cobrar mediante un fideicomiso ciego o LLC para mantener el anonimato.' 
+  },
+  nextArticle: { en: 'Next Guide: How to handle the money', ko: '다음 가이드: 돈을 관리하는 현실적인 법', es: 'Próxima guía: Cómo manejar el dinero' }
 }
 
 

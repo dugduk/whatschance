@@ -917,38 +917,46 @@ function ThemeToggle() {
 // ============================================================
 
 export function AdPlaceholder({ className = "" }) {
-  const { theme } = useTheme()
-  const { lang } = useLang()
-  const isDark = theme === 'dark'
+  const { theme } = useTheme();
+  const { lang } = useLang();
+  const isDark = theme === 'dark';
+
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error('AdSense Error', e);
+    }
+  }, []);
+
   return (
     <div className={`w-full max-w-3xl mx-auto ${className}`}>
       <div
-        className="rounded-lg flex flex-col items-center justify-center py-3 px-4"
+        className="rounded-lg flex flex-col items-center justify-center py-2 px-2 overflow-hidden"
         style={{
           border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
           background: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)'
         }}
       >
         <span
-          className="text-[10px] uppercase tracking-[0.2em] font-medium mb-2"
+          className="text-[10px] uppercase tracking-[0.2em] font-medium mb-1"
           style={{ color: isDark ? '#444' : '#bbb' }}
         >
           {t('advertisement', lang)}
         </span>
-        <div
-          className="w-full max-w-[320px] md:max-w-[728px] h-[50px] md:h-[90px] rounded flex items-center justify-center"
-          style={{
-            border: `1px dashed ${isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.06)'}`,
-            background: isDark ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)'
-          }}
-        >
-          <span style={{ color: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)', fontSize: '11px' }}>
-            320 × 50 / 728 × 90
-          </span>
+        <div className="w-full flex items-center justify-center overflow-hidden min-h-[50px] md:min-h-[90px]">
+          <ins
+            className="adsbygoogle"
+            style={{ display: 'block', width: '100%' }}
+            data-ad-client="ca-pub-5455444576155986"
+            data-ad-slot="5868515153"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // ============================================================

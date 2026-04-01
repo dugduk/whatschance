@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://whatschance.com/sitemap.xml
+Sitemap: https://www.whatschance.com/sitemap.xml

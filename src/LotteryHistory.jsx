@@ -47,6 +47,11 @@ export default function LotteryHistory({ onGoBack }) {
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>
             {t('hist1Title', lang)}
           </h2>
+          <img 
+            src="/images/hist_1.png" 
+            alt="Funding the Great Wall" 
+            className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-6 shadow-2xl border border-white/10 hover:scale-[1.01] transition-transform duration-500"
+          />
           <p className="text-lg leading-relaxed mb-3" style={{ color: isDark ? '#ddd' : '#333' }}>
             {t('hist1Desc', lang)}
           </p>
@@ -60,6 +65,11 @@ export default function LotteryHistory({ onGoBack }) {
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>
             {t('hist2Title', lang)}
           </h2>
+          <img 
+            src="/images/hist_2.png" 
+            alt="Ivy League Founders" 
+            className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-6 shadow-2xl border border-white/10 hover:scale-[1.01] transition-transform duration-500"
+          />
           <p className="text-lg leading-relaxed mb-3" style={{ color: isDark ? '#ddd' : '#333' }}>
             {t('hist2Desc', lang)}
           </p>
@@ -75,6 +85,11 @@ export default function LotteryHistory({ onGoBack }) {
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>
             {t('hist3Title', lang)}
           </h2>
+          <img 
+            src="/images/hist_3.png" 
+            alt="Modern Lottery Machine" 
+            className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-6 shadow-2xl border border-white/10 hover:scale-[1.01] transition-transform duration-500"
+          />
           <p className="text-lg leading-relaxed mb-3" style={{ color: isDark ? '#ddd' : '#333' }}>
             {t('hist3Desc', lang)}
           </p>
@@ -88,6 +103,11 @@ export default function LotteryHistory({ onGoBack }) {
           <h2 className="text-2xl font-bold mb-4" style={{ color: isDark ? '#ffd700' : '#d4af37' }}>
             {t('hist4Title', lang)}
           </h2>
+          <img 
+            src="/images/hist_4.png" 
+            alt="The Law of Truly Large Numbers" 
+            className="w-full aspect-square md:aspect-video object-cover rounded-2xl mb-6 shadow-2xl border border-white/10 hover:scale-[1.01] transition-transform duration-500"
+          />
           <p className="text-lg leading-relaxed mb-3" style={{ color: isDark ? '#ddd' : '#333' }}>
             {t('hist4Desc', lang)}
           </p>

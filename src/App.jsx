@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef, createContext, useContext } from 'react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import OddsBreakdown from './OddsBreakdown.jsx'
 import ZodiacFortune from './ZodiacFortune.jsx'
 import LotterySimulator from './lottery_simulator.jsx'
@@ -3135,6 +3136,7 @@ export default function App() {
           {legalModal === 'tos' && <LegalModal type="tos" onClose={() => setLegalModal(null)} />}
         </div>
       </LangContext.Provider>
+      <SpeedInsights />
     </ThemeContext.Provider>
   )
 }

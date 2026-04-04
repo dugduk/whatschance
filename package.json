@@ -6,6 +6,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "axios": "^1.13.6",
     "canvas-confetti": "^1.9.4",
     "cheerio": "^1.2.0",
